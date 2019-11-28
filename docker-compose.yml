@@ -4,15 +4,10 @@ services:
     build: ./web
     deploy:
       replicas: 4
-   
-    links:
-      - db
     expose:
       - 5000
-    depends_on:
-      - db
-  db:
-    build: ./db
+
+  
   
   nginx:
     build: ./nginx
